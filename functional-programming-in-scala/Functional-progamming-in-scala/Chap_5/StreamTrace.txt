@@ -1,0 +1,26 @@
+
+
+Stream(1,2,3,4).map(_ + 10).filter( _ % 2 == 0).toList		= Stream(12,14)
+
+Stream(1,2,3) =
+	Cons( ()=>1, ()=>Cons( ()=>2, ()=>Cons( ()=>3, ()=>Empty)))
+
+def add10(x: Int) = x + 10
+
+Stream(1,2,3).map(add10) =
+	Cons( ()=>1, ()=>Cons( ()=>2, ()=>Cons( ()=>3, ()=>Empty))).foldRight(Empty[Int]){ (a,b) => cons(add10(a),b)}
+
+	f(add10( ()=>1), ( ()=>Cons( ()=>2, ()=>Cons( ()=>3, ()=>Empty)) ).foldRight(Empty[Int])(f) )
+
+	f(add10( ()=>1), f(add10 ()=>2), ( ()=> Cons( ()=>3, ()=>Empty) ).foldRight(Empty[Int](f) ) )
+
+	f(add10( ()=>1), f(add10 ()=>2), f(add10( ()=>3), ( ()=> Cons( ()=>Empty)).foldRight(Empty[Int](f) ) )
+
+	f(add10( ()=>1), f(add10 ()=>2), f(add10( ()=>3), Empty))
+
+
+Stream(1,2,3).map(add10).map(add20) =
+
+	f(add10( ()=>1), f(add10 ()=>2), f(add10( ()=>3), Empty))
+
+

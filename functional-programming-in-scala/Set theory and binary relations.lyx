@@ -1,0 +1,902 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\numberwithin{equation}{section}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Basic Set Theory/Notation - Binary Relations
+\end_layout
+
+\begin_layout Part*
+Basic Concepts and Notation
+\end_layout
+
+\begin_layout Section*
+Definition
+\end_layout
+
+\begin_layout Standard
+A set is a well-defined collection of distinct objects.
+ Sets are conventionally denoted with capital letters.
+ Sets 
+\series bold
+A 
+\series default
+and 
+\series bold
+B 
+\series default
+are equal if and only if they have precisely the same elements.
+\end_layout
+
+\begin_layout Standard
+Note that a set does not imply any ordering and all elements are distinct.
+\end_layout
+
+\begin_layout Section*
+Membership
+\end_layout
+
+\begin_layout Standard
+If 
+\series bold
+B 
+\series default
+is a set and x is one of the objects of 
+\series bold
+B
+\series default
+, this is denoted by 
+\begin_inset Formula $x\in B$
+\end_inset
+
+, and is read as 
+\begin_inset Quotes eld
+\end_inset
+
+x belongs to 
+\series bold
+B
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ If y is not a member of 
+\series bold
+B
+\series default
+ then this is denoted by 
+\begin_inset Formula $y\notin B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part*
+Subsets
+\end_layout
+
+\begin_layout Standard
+If every member of set 
+\series bold
+A
+\series default
+ is also a member of set 
+\series bold
+B,
+\series default
+ then 
+\series bold
+A
+\series default
+ is said to be a subset of 
+\series bold
+B
+\series default
+, written as 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+.
+ Equivalently we can also write 
+\begin_inset Formula $B\supseteq A$
+\end_inset
+
+, 
+\series bold
+B
+\series default
+ is a superset of 
+\series bold
+A
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\series bold
+B 
+\series default
+is a set and x is one of the objects of 
+\series bold
+B
+\series default
+, t
+\end_layout
+
+\begin_layout Part*
+Power Sets
+\end_layout
+
+\begin_layout Standard
+The power set of a set 
+\series bold
+S
+\series default
+ is the set of all subsets of 
+\series bold
+S
+\series default
+.
+ The power set contains itself and the empty set because they are both subsets
+ of 
+\series bold
+S
+\series default
+.
+ For example, the power set of the set 
+\begin_inset Formula $\left\{ 1,2,3\right\} $
+\end_inset
+
+is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ \left\{ 1,2,3\right\} ,\left\{ 1,2\right\} ,\left\{ 1,3\right\} ,\left\{ 2,3\right\} ,\left\{ 1\right\} ,\left\{ 2\right\} ,\left\{ 3\right\} ,\varnothing\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The power set of a set 
+\series bold
+S 
+\series default
+is usually written as 
+\series bold
+P(S)
+\series default
+.
+\end_layout
+
+\begin_layout Part*
+Cardinality
+\end_layout
+
+\begin_layout Standard
+The cardinality 
+\begin_inset Formula $\left|S\right|$
+\end_inset
+
+of set 
+\series bold
+S
+\series default
+ is the number of members of 
+\series bold
+S.
+\end_layout
+
+\begin_layout Part*
+Cartesian Product
+\end_layout
+
+\begin_layout Standard
+A new set can be constructed by associating every element of one set with
+ every element of another set.
+ The Cartesian product of two sets 
+\series bold
+A 
+\series default
+and 
+\series bold
+B
+\series default
+, denoted by 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ is the set of all 
+\series bold
+ordered pairs
+\series default
+ (a,b) such that a is a member of 
+\series bold
+A
+\series default
+ and b is a member of 
+\series bold
+B
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\times B=\left\{ (a,b)\mid a\in A,b\in B\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Set Notation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Notation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x\in B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Membership: x is a member of B
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x\notin B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non-membership: x is not a member of B
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Subset: Set A is a subset of set B
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B\supseteq A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Superset: B is a superset of A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varnothing$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Empty set
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P(S)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Power set of set S
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left|S\right|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cardinality of set S
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\cup B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Union:
+\begin_inset Formula $\left\{ 1,2\right\} \cup\left\{ 2,3\right\} =\left\{ 1,2,3\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\cap B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Intersection: 
+\begin_inset Formula $\left\{ 1,2\right\} \cap\left\{ 2,3\right\} =\left\{ 2\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Predicates
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Notation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Example
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gives
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\land$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logical AND
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S=\left\{ n:\mathbb{N}:n\leq10\land n\:mod\:2\:=0\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ 2,4,6,8,10\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lor$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logical OR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S=\left\{ n:\mathbb{N}:n\leq10\lor\:n\:=11\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ 2,4,6,8,10,11\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Definition of a Binary Relation
+\end_layout
+
+\begin_layout Section*
+Ordered Pair
+\end_layout
+
+\begin_layout Standard
+An ordered pair is a set of a pair of objects with an order associated with
+ them.
+ If objects are represented by 
+\series bold
+x 
+\series default
+and 
+\series bold
+y
+\series default
+, then we write 
+\series bold
+(x,y) 
+\series default
+or 
+\series bold
+(y,x).
+ 
+\series default
+In general 
+\series bold
+(x,y) 
+\series default
+is different from 
+\series bold
+(y,x)
+\series default
+.
+\end_layout
+
+\begin_layout Section*
+Binary Relation
+\end_layout
+
+\begin_layout Standard
+A binary relation from set 
+\series bold
+A 
+\series default
+to set 
+\series bold
+B
+\series default
+ is a set of ordered pairs 
+\series bold
+(a,b)
+\series default
+ where 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $b\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When an ordered pair 
+\series bold
+(a,b) 
+\series default
+is in a relation 
+\series bold
+R
+\series default
+, we can say 
+\begin_inset Formula $\left(a,b\right)\in R$
+\end_inset
+
+, meaning element 
+\series bold
+a 
+\series default
+is related to element 
+\series bold
+b 
+\series default
+in relation 
+\series bold
+R
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+The Cartesian product 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ is the set of all ordered pairs for set 
+\series bold
+A 
+\series default
+and 
+\series bold
+B
+\series default
+.
+\end_layout
+
+\begin_layout Quote
+
+\emph on
+\noun on
+Thus
+\series bold
+ 
+\series default
+a binary relation from A to B is a subset of the Cartesian Product.
+ 
+\end_layout
+
+\begin_layout Paragraph*
+Example:-
+\end_layout
+
+\begin_layout Standard
+Let: -
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\left\{ 1,2,3\right\} 
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+B=\left\{ 4,5\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ \left(1,4\right),\left(2,5\right),\left(3,5\right)\right\} 
+\]
+
+\end_inset
+
+is a binary relation from 
+\series bold
+A 
+\series default
+to 
+\series bold
+B
+\series default
+.
+ But: -
+\begin_inset Formula 
+\[
+\left\{ \left(1,1\right),\left(1,4\right),(3,5\right\} 
+\]
+
+\end_inset
+
+is not because 1 is not in 
+\series bold
+B
+\series default
+.
+\end_layout
+
+\end_body
+\end_document

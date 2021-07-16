@@ -1,0 +1,29 @@
+
+Introduction
+
+r in scala terms is a function of the type: -
+
+def r[X](x: List[X]): List[X]
+r: [X](x: List[X])List[X]
+
+
+def map[A,B](x: List[A])(a: A => B): List[B] =
+  x.foldRight(Nil:List[B]){ (a1,b) => a(a1) :: b }
+
+map: [A, B](x: List[A])(a: A => B)List[B]
+
+We can show that
+
+map(r(a)) = r(map(a))
+
+For example :-
+
+r - reverse
+map - a = _ + 1
+
+map(List(1,2,3).reverse){_+1} = map(List(1,2,3)){_+1}.reverse
+
+
+From Haskell wiki
+Since a parametrically polymorphic value does not "know" anything about the unconstrained type variables, it must behave the same regardless of its type. 
+This is a somewhat limiting but extremely useful property known as parametricity.
