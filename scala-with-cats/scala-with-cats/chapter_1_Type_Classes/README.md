@@ -3,4 +3,4 @@
 ## Summary
 The `catsdemo` package uses the CATS `Eq` and `Show` type classes directly.
 
-The `typeclass` package use hand rolled type classes.
+The `typeclass` package uses hand rolled type classes.
