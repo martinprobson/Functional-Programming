@@ -233,5 +233,24 @@ pure (+) <*> Just 3 <*> Just 5
 Just 8
 ```
 
+Scala
+```scala
+import cats.Applicative
+import cats.implicits._
 
+val add: Int => Int => Int = x => y => x+y
+Applicative[Option].pure(add) <*> Some(3) <*> Some(5)
+res0: Option[Int] = Some(8)
+```
 
+Scala
+```scala
+add4: Int => (Int => (Int => (Int => Int))) = <function>
+//al add4: Int => Int => Int => Int => Int = a => b => c => d => a+b+c+d
+Applicative[Option].pure(add4) <*> Some(1) <*> Some(2) <*> Some(3) <*> Some(4)
+//res1: Option[Int] = Some(10)
+Applicative[List].pure(add4) <*> List(1) <*> List(2) <*> List(3) <*> List(4)
+//res2: List[Int] = List(10)
+Applicative[List].pure(add4) <*> List(1,100) <*> List(2) <*> List(3) <*> List(4)
+//res3: List[Int] = List(10, 109)
+```
