@@ -8,6 +8,7 @@ syntax: glob
 *.ghci
 *~
 *.bak
+*metals.sbt
 #*.off
 \#*
 *.old
