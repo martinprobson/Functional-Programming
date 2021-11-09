@@ -4,6 +4,8 @@ syntax: glob
 *.ser
 *.class
 *.jar
+*.ammonite
+*.ghci
 *~
 *.bak
 #*.off
