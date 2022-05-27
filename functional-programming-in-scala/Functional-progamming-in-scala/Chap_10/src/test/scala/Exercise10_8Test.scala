@@ -1,10 +1,9 @@
 import org.scalacheck.Prop._
-import org.scalacheck.{Prop,Arbitrary}
-import org.scalatest.FunSuite
+import org.scalacheck.{Arbitrary, Prop}
+import org.scalatest.{FunSuite, Outcome, fixture}
 import org.scalatest.prop.Checkers
-import org.scalatest.fixture
-import java.util.concurrent.{ExecutorService,Executors,Callable}
 
+import java.util.concurrent.{Callable, ExecutorService, Executors}
 import Par._
 import Exercise10_1._
 import Exercise10_8._
@@ -37,12 +36,12 @@ class Exercise10_8Test extends fixture.FunSuite with Checkers {
    * @see [[http://www.scalatest.org/user_guide/sharing_fixtures#withFixtureOneArgTest withFixtureOneArgTest]]
    * 
    */
-  def withFixture(test: OneArgTest) = {
+  def withFixture(test: OneArgTest): Outcome = {
     val es = Executors.newFixedThreadPool(10)
 
     try {
       withFixture(test.toNoArgTest(es))
-    } finally es.shutdown
+    } finally es.shutdown()
   }
 
   test("Test par version of Monoid") {

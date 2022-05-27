@@ -20,7 +20,8 @@ object Exercise10_8 {
       case a +: IndexedSeq() => unit(f(a))
       case _ => {
         val (l,r) = v.splitAt(v.length/2)
-        m.op(parFoldMap(l,par(m))(f),parFoldMap(r,par(m))(f))
+        m.op(parFoldMap(l,par(m))(f),
+            parFoldMap(r,par(m))(f))
       }
   }
 }
