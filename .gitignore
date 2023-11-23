@@ -5,6 +5,7 @@ syntax: glob
 *.class
 *.jar
 *.ammonite
+*.scala-build
 *.ghci
 *~
 *.bak

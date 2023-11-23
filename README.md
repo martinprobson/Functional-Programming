@@ -5,8 +5,6 @@ Documentation, code and learning material produced whilst learning FP (mainly in
 
 ## Links
 
-[Learn Haskell](learn-haskell/Home.md)
-
 [Functional Programming in Scala](functional-programming-in-scala/README.md)
 
 [Scala with CATS](scala-with-cats/README.md)
