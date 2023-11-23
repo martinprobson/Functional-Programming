@@ -1,5 +1,3 @@
-import Data.List (span)
-
 isZero :: (Integral a) => a  -> Bool
 isZero 0 = True
 isZero x = False
@@ -69,7 +67,7 @@ foldr' _ b [] = b
 foldr' f b (x:xs) = f x (foldr' f b xs)
 
 reverse' :: [a] -> [a]
-reverse' l = foldl' (\acc x -> x : acc) [] l
+reverse' = foldl' (flip (:)) [] 
 
 length'' :: [a] -> Int
 length'' [] = 0
