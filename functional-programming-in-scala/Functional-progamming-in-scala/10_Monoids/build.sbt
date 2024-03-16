@@ -2,18 +2,20 @@
 // Functional Programming in Scala - Chapter 10 - Monoids
 //
 //
-scalacOptions ++= Seq(
-	"-deprecation",
-	"-Xcheckinit")
+scalacOptions ++= Seq( "-deprecation")
 
 name := "Monoids"
 
 version := "1.0"
 
-scalaVersion := "2.12.6"
+scalaVersion := "3.3.3"
+
+fork := true
 
 resolvers += Resolver.mavenLocal
 
-libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.0" 
+libraryDependencies += "net.martinprobson.fpinscala.chap7" %% "par" % "0.0.1-SNAPSHOT"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" 
+libraryDependencies += "org.scalatestplus" %% "scalacheck-1-17" % "3.2.17.0" % "test"
+
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.18" % "test"

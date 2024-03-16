@@ -2,8 +2,8 @@
 
 package fpinscala.chapter8
 
-import org.scalacheck.Prop.{forAll,BooleanOperators}
-import org.scalacheck.{Properties,Gen}
+import org.scalacheck.Prop.*
+import org.scalacheck.*
 import Main.{sum,max}
 
 object ListSumSpecification extends Properties("ListSum") {

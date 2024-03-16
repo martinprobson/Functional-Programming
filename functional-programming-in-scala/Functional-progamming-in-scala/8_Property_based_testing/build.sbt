@@ -8,10 +8,10 @@ name := "SumScalaCheck"
 
 version := "1.0"
 
-scalaVersion := "2.12.6"
+scalaVersion := "3.3.3"
 
 resolvers += Resolver.mavenLocal
 
-libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.0" % "test"
+libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.15.4" % "test"
 
 
