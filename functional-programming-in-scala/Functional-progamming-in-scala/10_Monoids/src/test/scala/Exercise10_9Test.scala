@@ -23,7 +23,7 @@ class Exercise10_9Test extends AnyFunSuite with Checkers with Logging {
   given PropertyCheckConfiguration = PropertyCheckConfiguration(minSuccessful = 10000)
   given Arbitrary[IndexedSeq[Int]] = Arbitrary(oneOf(genIndexSeq,genSortedIndexSeq))
 
-  val checkSequenceMonoid = forAll( (is: IndexedSeq[Int]) => {
+  val checkSequenceMonoid: Prop = forAll((is: IndexedSeq[Int]) => {
     val actual = foldMapV(is, sequenceMonoid) { i => (i, None) }
     val expected = is == is.sorted
     logger.info(s"Checking $is Expected: $expected Actual: $actual")
