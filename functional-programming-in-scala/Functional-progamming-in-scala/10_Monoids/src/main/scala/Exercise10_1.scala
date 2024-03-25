@@ -1,14 +1,16 @@
-
 //
 // Exercise 10.1
 //
 // Give Monoid instances for addition and multiplication as well as the Boolean
 // operators
 //
-object Exercise10_1 {
+object Exercise10_1 extends Logging {
 
   def intAddition: Monoid[Int] = new Monoid[Int] {
-    def op(a1: Int, a2: Int): Int = a1 + a2
+    def op(a1: Int, a2: Int): Int = {
+      logger.info(s"op($a1,$a2)")
+      a1 + a2
+    }
     def zero: Int = 0
   }
 

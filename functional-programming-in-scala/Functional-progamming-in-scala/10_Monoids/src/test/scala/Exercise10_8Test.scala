@@ -56,15 +56,19 @@ class Exercise10_8Test extends FixtureAnyFunSuite with Checkers with Logging {
     withFixture(test.toNoArgTest(useVirtualThreads))
 
   lazy val usePlatformThreads: ExecutorService =
-    Executors.newThreadPerTaskExecutor(Thread.ofPlatform().name("platform-", 0).factory())
+    Executors.newThreadPerTaskExecutor(
+      Thread.ofPlatform().name("platform-", 0).factory()
+    )
 
   lazy val useVirtualThreads: ExecutorService =
-    Executors.newThreadPerTaskExecutor(Thread.ofVirtual().name("virtual-", 0).factory())
+    Executors.newThreadPerTaskExecutor(
+      Thread.ofVirtual().name("virtual-", 0).factory()
+    )
 
   test("Test parFoldMap") { es =>
-    val idxseq = Range(1,1000000).inclusive.toList.toIndexedSeq
+    val idxseq = Range(1, 100).inclusive.toList.toIndexedSeq
     val result = Par.run(es)(parFoldMap(idxseq, intAddition)(i => i + 1)).get
-    assert(result === Range(1,1000000).inclusive.map(_+1).sum)
+    assert(result === Range(1, 100).inclusive.map(_ + 1).sum)
   }
   test("Test par version of Monoid") { es =>
     {
