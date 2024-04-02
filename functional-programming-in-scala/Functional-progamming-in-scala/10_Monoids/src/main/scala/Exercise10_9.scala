@@ -1,10 +1,8 @@
 //
-// Exercise 10.9
-// Use foldMap to determine whetner a given IndexedSeq[Int] is ordered.
+// Exercise10.9 - Use foldMap to detect whether a given IndexSeq[Int] is ordered.
+//                You'll need to come up with a creative Monoid.
 //
-import Exercise10_7.*
-
-object Exercise10_9 extends Logging with App {
+object Exercise10_9 extends Logging {
 
   def sequenceMonoid: Monoid[(Int, Option[Boolean])] =
     new Monoid[(Int, Option[Boolean])] {
@@ -22,9 +20,4 @@ object Exercise10_9 extends Logging with App {
       }
       def zero: (Int, Option[Boolean]) = (-9990, None)
     }
-
-//  logger.info(
-//    s" ans = ${foldMapV(IndexedSeq(0, -1, 0, 0), testMonoid)(i => (i, None))}"
-//  )
-
 }

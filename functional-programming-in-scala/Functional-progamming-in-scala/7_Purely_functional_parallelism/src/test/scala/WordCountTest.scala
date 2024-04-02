@@ -14,15 +14,14 @@ class WordCountTest extends AnyFunSuite with BeforeAndAfterAll {
 
   case class TestCondition(expectedResult: Int, input: List[String])
 
+  /** The test conditions (in file CountWordsTest.txt are in the format: -
+   *
+   * {expected word count}|{one of more lines of text} ##
+   *
+   * This code parses the file into a List of TestConditions.
+   */
   def tests: List[TestCondition] = {
-
-    /** The test conditions (in file CountWordsTest.txt are in the format: -
-      *
-      * <expected word count>|<one of more lines of text> ##
-      *
-      * This code parses the files into a List of TestConditions.
-      */
-    val tc: List[TestCondition] = io.Source
+    io.Source
       .fromResource("CountWordsTest.txt")
       .mkString
       .split("##")
@@ -38,7 +37,6 @@ class WordCountTest extends AnyFunSuite with BeforeAndAfterAll {
             .toList
         )
       })
-    tc
   }
 
   /** First the sequential word count.
